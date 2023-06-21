@@ -23,24 +23,10 @@ app.use(express.static(pathDir))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Hong'
+        name: 'Shan Hong Liew'
     })
 })
 
-app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About me',
-        name: 'Hong'
-    })
-})
-
-app.get('/help', (req, res) => {
-    res.render('help', {
-        message: 'holla people',
-        title: 'Help',
-        name: 'Hong'
-    })
-})
 
 app.get('/weather', (req, res) => {
     if(!req.query.address){
@@ -88,7 +74,7 @@ app.get('/help/*', (req, res) => {
     res.render('error',{
         title: 'error',
         message: 'help article not found',
-        name: 'Hong'
+        name: 'Shan Hong Liew'
     })
 })
 
@@ -96,7 +82,7 @@ app.get('*', (req, res) =>{
     res.render('error', {
         title: 'Error',
         message: 'Page not found',
-        name: 'Hong'
+        name: 'Shan Hong Liew'
     })
 })
 
